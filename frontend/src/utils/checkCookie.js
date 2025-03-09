@@ -8,10 +8,5 @@ function getCookie(name) {
 
   const token = getCookie('token');
   
-//   if (token) {
-//     console.log('Token is:', token);  
-//   } else {
-//     console.log('Token not found');
-//   }
   
     export default token;

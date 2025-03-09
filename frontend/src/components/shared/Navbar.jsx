@@ -9,23 +9,11 @@ import axios from 'axios'
 import { USER_API_END_POINT } from '@/utils/constant'
 import { setUser } from '@/redux/authSlice'
 import { toast } from 'sonner'
-import token from './checkCookie';
 
 const Navbar = () => {
     const { user } = useSelector(store => store.auth);
     const dispatch = useDispatch();
     const navigate = useNavigate();
-
-    useEffect(() => {
-
-        if (token) {
-            console.log('Token is:', token);  
-          } else {
-            console.log('Token not found');
-            dispatch(setUser(null));
-          }
-
-    }, [user]);
 
 
     const logoutHandler = async () => {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import Navbar from './shared/Navbar'
 import { Avatar, AvatarImage } from './ui/avatar'
 import { Button } from './ui/button'
@@ -7,9 +7,13 @@ import { Badge } from './ui/badge'
 import { Label } from './ui/label'
 import AppliedJobTable from './AppliedJobTable'
 import UpdateProfileDialog from './UpdateProfileDialog'
-import { useSelector } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux'
 import useGetAppliedJobs from '@/hooks/useGetAppliedJobs'
 import UpdateProfilePictureDialog from './UpdateProfilePictureDialog'
+import token from '@/utils/checkCookie';
+import { useNavigate } from 'react-router-dom'
+import { setUser } from '@/redux/authSlice'
+
 
 // const skills = ["Html", "Css", "Javascript", "Reactjs"]
 const isResume = true;
@@ -19,6 +23,22 @@ const Profile = () => {
     const [open, setOpen] = useState(false);
     const {user} = useSelector(store=>store.auth);
     const [openpp, setOpenpp] = useState(false);
+       const dispatch = useDispatch();
+       const navigate = useNavigate();
+
+    // useEffect(() => {
+
+    //     if (token) {
+    //         console.log('Token is:', token);  
+    //       } else {
+    //         console.log('Token not found');
+    //         if(user){
+    //        dispatch(setUser(null));
+    //        navigate("/login");
+    //     }
+    //       }
+
+    // }, []);
 
     return (
         <div>
