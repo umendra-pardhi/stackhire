@@ -108,10 +108,17 @@ export const login = async (req, res) => {
 
     return res
       .status(200)
+      // .cookie("token", token, {
+      //   maxAge: 1 * 24 * 60 * 60 * 1000,
+      //   httpsOnly: true,
+      //   sameSite: "strict",
+      // })
       .cookie("token", token, {
-        maxAge: 1 * 24 * 60 * 60 * 1000,
-        httpsOnly: true,
-        sameSite: "strict",
+        maxAge: 1 * 24 * 60 * 60 * 1000,  // 1 day
+        httpsOnly: true,                   // Prevents client-side access
+        secure: true,                     // Ensures cookie is sent over HTTPS
+        sameSite: "None",                 // Allows cross-origin cookies
+        domain: ".stackhire.site",        // Root domain for both frontend and backend
       })
       .json({
         message: `Welcome back ${user.fullname}`,
