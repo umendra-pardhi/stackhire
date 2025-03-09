@@ -44,4 +44,4 @@ app.use("/api/v1/application", applicationRoute);
 //     console.log(`Server running at port ${PORT}`);
 // });
 
-module.exports = app;
+export default app;
