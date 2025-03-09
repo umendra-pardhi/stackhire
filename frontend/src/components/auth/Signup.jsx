@@ -132,7 +132,7 @@ const Signup = () => {
                             value={input.password}
                             name="password"
                             onChange={changeEventHandler}
-                            placeholder="example@gmail.com"
+                            placeholder="password here"
                         />
                     </div>
                     <div className='flex items-center justify-between'>

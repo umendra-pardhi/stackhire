@@ -95,11 +95,11 @@ const Job = ({ job }) => {
                 >
                     View Details
                 </Button>
-                <Button 
+                {/* <Button 
                     className="w-full sm:w-auto bg-blue-600 hover:bg-blue-700"
                 >
                     Save For Later
-                </Button>
+                </Button> */}
             </div>
         </div>
     );
