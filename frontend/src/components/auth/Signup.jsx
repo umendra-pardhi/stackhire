@@ -90,6 +90,7 @@ const Signup = () => {
                                 type="file"
                                 onChange={changeFileHandler}
                                 className="cursor-pointer "
+                                required
                             />
                             </div>
                             </div>
@@ -103,6 +104,7 @@ const Signup = () => {
                             name="fullname"
                             onChange={changeEventHandler}
                             placeholder="name here"
+                            required
                         />
                     </div>
                     <div className='my-2'>
@@ -113,6 +115,7 @@ const Signup = () => {
                             name="email"
                             onChange={changeEventHandler}
                             placeholder="example@gmail.com"
+                            required
                         />
                     </div>
                     <div className='my-2'>
@@ -123,6 +126,7 @@ const Signup = () => {
                             name="phoneNumber"
                             onChange={changeEventHandler}
                             placeholder="9090909090"
+                            required
                         />
                     </div>
                     <div className='my-2'>
@@ -133,6 +137,7 @@ const Signup = () => {
                             name="password"
                             onChange={changeEventHandler}
                             placeholder="password here"
+                            required
                         />
                     </div>
                     <div className='flex items-center justify-between'>
@@ -146,6 +151,7 @@ const Signup = () => {
                                     checked={input.role === 'student'}
                                     onChange={changeEventHandler}
                                     className="cursor-pointer"
+                                    required
                                 />
                                 <Label htmlFor="r1" className='cursor-pointer'>Student</Label>
                             </div>
@@ -158,6 +164,7 @@ const Signup = () => {
                                     checked={input.role === 'recruiter'}
                                     onChange={changeEventHandler}
                                     className="cursor-pointer"
+                                    required
                                 />
                                 <Label htmlFor="r2" className='cursor-pointer'>Recruiter</Label>
                             </div>
