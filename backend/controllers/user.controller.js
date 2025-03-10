@@ -117,7 +117,7 @@ export const login = async (req, res) => {
         maxAge: 1 * 24 * 60 * 60 * 1000,  // 1 day
         httpsOnly: true,                   // Prevents client-side access
         secure: true,                     // Ensures cookie is sent over HTTPS
-        sameSite: "none",                 // Allows cross-origin cookies
+        sameSite: "lax",                 // Allows cross-origin cookies
         domain: "stackhire.site",        // Root domain for both frontend and backend
       })
       .json({
